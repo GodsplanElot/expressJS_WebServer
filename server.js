@@ -18,7 +18,7 @@ app.get('/old-page(.html)?', (req, res) => {
 });
 
 //Route handlers 
-app.get('/hello(.html)?', (req res, next) => {
+app.get('/hello(.html)?', (req, res, next) => {
     console.log('Attempted to load Hello.html');
     next()
 }, (req, res) => {
