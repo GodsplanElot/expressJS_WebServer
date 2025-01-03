@@ -18,6 +18,12 @@ app.get('/old-page(.html)?', (req, res) => {
 });
 
 //Route handlers 
+app.get('/hello(.html)?', (req res, next) => {
+    console.log('Attempted to load Hello.html');
+    next()
+}, (req, res) => {
+    res.send('Hello World')
+})
 
 app.get('/*', (req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
