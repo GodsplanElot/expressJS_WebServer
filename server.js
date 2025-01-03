@@ -17,6 +17,8 @@ app.get('/old-page(.html)?', (req, res) => {
     res.redirect(301, '/new-page.html');
 });
 
+//Route handlers 
+
 app.get('/*', (req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 })
