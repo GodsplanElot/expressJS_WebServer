@@ -23,7 +23,12 @@ app.get('/hello(.html)?', (req, res, next) => {
     next()
 }, (req, res) => {
     res.send('Hello World')
-})
+});
+
+//chaining route handlers
+
+
+
 
 app.get('/*', (req, res) => {
     res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
